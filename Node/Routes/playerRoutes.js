@@ -4,6 +4,8 @@ const router = express.Router();
 
 //초기 자원 설정
 
+const resourceFilePath = 'resources.json';          //자원 저장 파일 경로
+
 const initalResources = {
     metal : 500,
     crystal : 300,
@@ -40,7 +42,7 @@ router.post('/register', (req, res) => {
     };
 
     saveResources();
-    res,send({message : '등록 완료' , player:name});
+    res.send({message : '등록 완료' , player:name});
 
 
 
@@ -55,22 +57,29 @@ router.post('/login', (req, res) => {
     {
         return res.status(404).send({message: '플레이어를 찾을 수 없습니다.'});
     }
-    if(password !== global.player[name].password)
+    if(password !== global.players[name].password)
     {
         return res.status(401).send({message : '비밀번호가 틀렸습니다.'});
     }
+
+    const player = global.players[name];
 
     //응답 데이터
     const reqponsePayLoad = {
         playerName: player.playerName,
         metal : player.resources.metal,
         crystal : player.resources.crystal,
-        deuterium : player.resource.deuterium
+        deuterium : player.resources.deuterium
     }
 
     console.log("Login response playload : " , reqponsePayLoad);
     res.send(reqponsePayLoad);
 
 });
+
+function saveResources()
+{
+    fs.writeFileSync(resourceFilePath, JSON.stringify(global.players, null, 2));
+}
 
 module.exports = router;                //라우터 등록
