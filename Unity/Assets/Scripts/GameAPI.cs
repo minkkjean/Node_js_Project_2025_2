@@ -54,7 +54,7 @@ public class GameAPI : MonoBehaviour
 
             if (request.result != UnityWebRequest.Result.Success)
             {
-                Debug.LogError($"Error login player : {request.result}");
+                Debug.LogError($"Error login player : {request.result}");       
             }
             else
             {
@@ -70,10 +70,10 @@ public class GameAPI : MonoBehaviour
                     {
                         metal = Convert.ToInt32(responseData["metal"]),
                         crystal = Convert.ToInt32(responseData["crystal"]),
-                        deuteriurm = Convert.ToInt32(responseData["deuteriurm"]),
+                        deuteriurm = Convert.ToInt32(responseData["deuterium"]),
                         Planets = new List<PlanetModel>()
                     };
-                    onSuccess.Invoke(playerMode);
+                    onSuccess?.Invoke(playerMode);
                     Debug.Log("Login successful");
                 }
                 catch (Exception ex)
