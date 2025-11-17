@@ -778,6 +778,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &790128332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 790128334}
+  - component: {fileID: 790128333}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &790128333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790128332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 382c4c6a02df6d248a9ccb54b934dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inveontoryItems: []
+  playerQuests:
+  - quest_id: 1
+    title: "\uCD08\uBCF4\uC790 \uD018\uC2A4\uD2B8 "
+    description: "\uCCAB \uBC88\uC9F8 \uD018\uC2A4\uD2B8\uB97C \uC644\uB8CC \uD558\uC138\uC694"
+    reward_exp: 100
+    reward_item_id: 3
+    status: "\uC644\uB8CC"
+  - quest_id: 2
+    title: "\uC6A9\uC0AC\uC758 \uAC80"
+    description: "\uC804\uC124\uC758 \uAC80\uC744 \uCC3E\uC544\uBCF4\uC138\uC694"
+    reward_exp: 500
+    reward_item_id: 1
+    status: "\uC9C4\uD589\uC911"
+  - quest_id: 3
+    title: "\uC911\uAE09\uC790 \uD018\uC2A4\uD2B8"
+    description: "\uC911\uAE09\uC790\uB97C \uC0C1\uB300\uD558\uC138\uC694"
+    reward_exp: 600
+    reward_item_id: 2
+    status: "\uC2DC\uC791"
+--- !u!4 &790128334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790128332}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 532.0188, y: 211.87715, z: -0.90303516}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905474884
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,3 +2088,4 @@ SceneRoots:
   - {fileID: 2001914642}
   - {fileID: 1313064969}
   - {fileID: 762281858}
+  - {fileID: 790128334}
